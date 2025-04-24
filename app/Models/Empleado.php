@@ -13,6 +13,12 @@ class Empleado extends Model
     {
         return $this->belongsTo(Cargo::class);
     }
+
+    //un empleado puede tener muchos pagos
+    public function pagos()
+    {
+        return $this->hasMany(Pago::class);
+    }
     
 
 }
