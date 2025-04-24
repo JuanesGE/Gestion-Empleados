@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('pagos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('empleado_id')->constrained()->onDelete('cascade');
+            $table->decimal('monto', 10, 2);
+            $table->date('fecha_pago');
             $table->timestamps();
         });
     }
