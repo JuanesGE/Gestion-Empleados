@@ -13,4 +13,6 @@ class Cargo extends Model
     {
         return $this->hasMany(Empleado::class);
     }
+
+    protected $fillable = ['nombre'];
 }

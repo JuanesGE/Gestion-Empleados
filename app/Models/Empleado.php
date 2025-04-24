@@ -20,5 +20,6 @@ class Empleado extends Model
         return $this->hasMany(Pago::class);
     }
     
+    protected $fillable = ['nombre', 'email', 'estado', 'cargo_id'];
 
 }
